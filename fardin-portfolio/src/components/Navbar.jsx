@@ -21,9 +21,9 @@ const phoneNumber = "8801872175065";
 const navLinks = [
   { name: "Home", href: "#home", icon: <FaHouse /> },
   { name: "About", href: "#about", icon: <FaUser /> },
-  { name: "Experience", href: "#experience", icon: <FaBriefcase /> },
-  { name: "Recent Works", href: "#projects", icon: <FaFolderOpen /> },
   { name: "Skills", href: "#skills", icon: <FaLayerGroup /> },
+  { name: "Education", href: "#education", icon: <FaFolderOpen /> },
+  { name: "Experience", href: "#experience", icon: <FaBriefcase /> },
   { name: "Contact", href: "#contact", icon: <FaEnvelope /> },
 ];
 
@@ -59,17 +59,19 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-transparent px-3 py-5 font-[Poppins] md:px-6">
+    <header className="fixed top-0 md:top-0 lg:top-2 left-0 z-50 w-full px-3 py-2 md:px-3 md:py-8 lg:px-3 lg:py-2 font-[Poppins] pointer-events-none">
       <nav
-        className={`relative mx-auto flex items-center justify-between rounded-4xl border border-black/10 bg-white/90 shadow-[0_12px_40px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-all duration-500 ${
-          scrolled ? "max-w-6xl px-4 py-2.5" : "max-w-7xl px-5 py-3 md:px-6"
+        className={`relative mx-auto flex items-center justify-between rounded-4xl border border-black/10 bg-white/90 shadow-[0_12px_40px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-all duration-500 pointer-events-auto ${
+          scrolled
+            ? "max-w-6xl px-4 py-2.5 -mt-2.5"
+            : "max-w-7xl px-5 py-3 md:px-6"
         }`}
       >
         <Link href="/" className="flex items-center gap-2.5">
           <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#151515] text-white text-xl">
             <FaCode />
           </span>
-          <span className="text-2xl font-extrabold text-shadow-sky-500">
+          <span className="text-xl md:text-[23px] lg:text-[26px] font-extrabold text-shadow-sky-500">
             Fardin.
           </span>
         </Link>

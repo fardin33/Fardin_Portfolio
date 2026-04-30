@@ -19,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="fardinTheme">
-      <body className={`${poppins.className} bg-base-100 text-neutral`}>
+      <body className={`${poppins.className} absolute inset-0 `}>
         <Navbar />
         {children}
         <Footer />
