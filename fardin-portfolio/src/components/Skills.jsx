@@ -27,6 +27,8 @@ import {
   SiFigma,
 } from "react-icons/si";
 
+import { SiFlutter, SiDart } from "react-icons/si";
+
 const skills = [
   {
     title: "Web App",
@@ -45,6 +47,8 @@ const skills = [
     title: "Mobile App",
     icon: <FaMobileScreenButton />,
     items: [
+      { name: "Dart", icon: <SiDart />, percent: 70 },
+      { name: "Flutter", icon: <SiFlutter />, percent: 75 },
       { name: "React Native", icon: <FaReact />, percent: 65 },
       { name: "Expo", icon: <SiExpo />, percent: 60 },
     ],
@@ -147,7 +151,7 @@ const Skills = () => {
                 className="rounded-4xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-5"
               >
                 <div className="mb-5 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-xl text-primary">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-700 text-xl text-sky-500">
                     {group.icon}
                   </div>
 
@@ -169,7 +173,7 @@ const Skills = () => {
                     >
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
-                          <span className="text-lg text-primary">
+                          <span className="text-lg text-black">
                             {skill.icon}
                           </span>
 
@@ -178,14 +182,14 @@ const Skills = () => {
                           </p>
                         </div>
 
-                        <p className="text-xs font-bold text-sky-500">
+                        <p className="text-xs font-bold text-sky-800">
                           {animate ? skill.percent : 0}%
                         </p>
                       </div>
 
                       <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-sky-100">
                         <div
-                          className="h-full rounded-full bg-sky-500 transition-all duration-1000 ease-out"
+                          className="h-full rounded-full bg-sky-800 transition-all duration-1000 ease-out"
                           style={{
                             width: animate ? `${skill.percent}%` : "0%",
                           }}

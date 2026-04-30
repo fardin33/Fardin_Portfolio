@@ -76,7 +76,7 @@ const About = () => {
             <div className="relative mx-auto max-w-107.5">
               <div className="absolute -left-6 -top-6 z-20 rounded-2xl border border-base-300 bg-base-100/90 px-5 py-3 shadow-xl backdrop-blur">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-800 text-sky-400 text-xl">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-700 text-sky-400 text-xl">
                     <FaAward />
                   </div>
 
