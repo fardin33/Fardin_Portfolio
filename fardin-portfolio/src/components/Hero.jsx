@@ -19,7 +19,7 @@ const Hero = () => {
     >
       <div className="absolute left-1/2 top-0 z-0 h-75 w-75 -translate-x-1/2 rounded-full bg-sky-500/10 opacity-50 blur-[120px] sm:h-125 sm:w-125" />
 
-      <div className="relative z-10 mx-auto w-11/12 px-6">
+      <div className="relative z-10 mx-auto max-w-275 xl:max-w-337.5 2xl:max-w-375 px-4 sm:px-6 lg:px-8 xl:px-6 2xl:px-4">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
           <div className="relative order-1 flex items-center justify-center lg:order-2">
             <div className="group relative flex items-center justify-center">
