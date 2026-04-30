@@ -4,7 +4,10 @@ import { projects } from "@/data/projects";
 
 const Projects = () => {
   return (
-    <section id="projects" className="section-padding bg-base-100">
+    <section
+      id="projects"
+      className="w-11/12 mx-auto section-padding bg-base-100"
+    >
       <div className="container-custom">
         <div className="text-center">
           <p className="font-semibold text-primary">Projects</p>

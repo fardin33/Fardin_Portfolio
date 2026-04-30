@@ -59,7 +59,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 md:top-0 lg:top-2 left-0 z-50 w-full px-3 py-2 md:px-3 md:py-8 lg:px-3 lg:py-2 font-[Poppins] pointer-events-none">
+    <header className="fixed top-1 md:top-0 lg:top-2 left-0 z-50 w-full px-3 py-2.5 md:px-8 md:py-2 lg:px-3 lg:py-2 font-[Poppins] pointer-events-none">
       <nav
         className={`relative mx-auto flex items-center justify-between rounded-4xl border border-black/10 bg-white/90 shadow-[0_12px_40px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-all duration-500 pointer-events-auto ${
           scrolled

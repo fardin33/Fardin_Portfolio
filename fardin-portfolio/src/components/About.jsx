@@ -66,8 +66,8 @@ const About = () => {
 
   return (
     <section id="about" className="relative mt-30 py-24 p-2 overflow-visible">
-      <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 bottom-20 h-72 w-72 rounded-full bg-sky-200/50 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full" />
+      {/* Blue shade div removed from here */}
 
       <div className="relative z-10 mx-auto w-11/12">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">

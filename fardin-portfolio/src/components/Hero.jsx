@@ -25,7 +25,7 @@ const Hero = () => {
             <div className="group relative flex items-center justify-center">
               <div className="absolute rounded-full blur-3xl transition-all duration-500 h-60 w-60" />
 
-              <div className="mt-8  md:mt-2 lg:mt-0 relative mx-auto h-87.5 w-70 overflow-hidden rounded-full sm:h-112.5 sm:w-87.5 lg:h-180 lg:w-180">
+              <div className="mt-8  md:mt-8 lg:mt-0 relative mx-auto h-87.5 w-70 overflow-hidden rounded-full sm:h-112.5 sm:w-87.5 lg:h-180 lg:w-180">
                 <Image
                   src={me}
                   alt="Fardin Hassan"
