@@ -151,7 +151,7 @@ const Skills = () => {
                 className="rounded-4xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-5"
               >
                 <div className="mb-5 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-700 text-xl text-sky-500">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-950 text-xl text-sky-400">
                     {group.icon}
                   </div>
 
@@ -182,14 +182,14 @@ const Skills = () => {
                           </p>
                         </div>
 
-                        <p className="text-xs font-bold text-sky-800">
+                        <p className="text-xs font-bold text-sky-700">
                           {animate ? skill.percent : 0}%
                         </p>
                       </div>
 
                       <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-sky-100">
                         <div
-                          className="h-full rounded-full bg-sky-800 transition-all duration-1000 ease-out"
+                          className="h-full rounded-full bg-sky-700 transition-all duration-1000 ease-out"
                           style={{
                             width: animate ? `${skill.percent}%` : "0%",
                           }}

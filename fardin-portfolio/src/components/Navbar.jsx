@@ -277,7 +277,7 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   onClick={(event) => handleNavClick(event, link.href)}
-                  className={`relative px-4 py-2 text-[15px] font-semibold rounded-full transition-colors duration-300 ease-in ${
+                  className={`relative px-4 py-2 text-[15px] font-semibold rounded-full transition-colors duration-200 ease-in ${
                     isActive
                       ? "bg-black text-white scale-105 shadow-sm"
                       : "text-gray-500 hover:text-black hover:bg-gray-100 hover:scale-105"
