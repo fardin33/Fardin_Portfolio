@@ -85,10 +85,15 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`relative px-4 py-2 text-[15px] font-semibold transition after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:-translate-x-1/2 after:rounded-full after:bg-sky-500 after:transition-all ${
+                  // className={`relative px-4 py-2 text-[15px] font-semibold transition after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:-translate-x-1/2 after:rounded-full after:bg-sky-500 after:transition-all ${
+                  //   isActive
+                  //     ? "text-black after:w-7.5"
+                  //     : "text-gray-500 hover:text-black after:w-0 hover:after:w-10"
+                  // }`}
+                  className={`relative px-4 py-2 text-[15px] font-semibold rounded-full transition-colors duration-300 ease-in ${
                     isActive
-                      ? "text-black after:w-7.5"
-                      : "text-gray-500 hover:text-black after:w-0 hover:after:w-10"
+                      ? "bg-black text-white scale-105 shadow-sm"
+                      : "text-gray-500 hover:text-black hover:bg-gray-100 hover:scale-105"
                   }`}
                 >
                   {link.name}

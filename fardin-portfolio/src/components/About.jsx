@@ -72,7 +72,7 @@ const About = () => {
       <div className="relative z-10 mx-auto w-11/12">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           {/* Left Sticky Image */}
-          <div className="hidden lg:block lg:sticky lg:top-28 lg:self-start">
+          <div className="lg:block lg:sticky lg:top-28 lg:self-start">
             <div className="relative mx-auto max-w-107.5">
               <div className="absolute -left-6 -top-6 z-20 rounded-2xl border border-base-300 bg-base-100/90 px-5 py-3 shadow-xl backdrop-blur">
                 <div className="flex items-center gap-3">
