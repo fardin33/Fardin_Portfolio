@@ -3,8 +3,19 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight, FaCode, FaGrip } from "react-icons/fa6";
+import {
+  FaArrowRight,
+  FaCode,
+  FaGrip,
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaLaravel,
+  FaFigma,
+} from "react-icons/fa6";
 import { CiMobile3 } from "react-icons/ci";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
+import { SiJavascript, SiTypescript } from "react-icons/si";
 
 import project1 from "../assets/Electrician-amico.png";
 import project2 from "../assets/Electrician-bro.png";
@@ -18,6 +29,12 @@ const projects = [
     category: "web",
     image: project1,
     description: "An open-source SaaS starter registry.",
+    liveLink: "#",
+    languages: [
+      { name: "Next.js", icon: <RiNextjsFill /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
+    ],
   },
   {
     id: 2,
@@ -25,6 +42,12 @@ const projects = [
     category: "design",
     image: project2,
     description: "Luxury car showroom UI focused on clarity.",
+    liveLink: "#",
+    languages: [
+      { name: "Figma", icon: <FaFigma /> },
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+    ],
   },
   {
     id: 3,
@@ -32,6 +55,12 @@ const projects = [
     category: "web",
     image: project3,
     description: "Municipal infrastructure landing page.",
+    liveLink: "#",
+    languages: [
+      { name: "React", icon: <FaReact /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
+    ],
   },
   {
     id: 4,
@@ -39,6 +68,12 @@ const projects = [
     category: "design",
     image: project4,
     description: "Modern shoe store hero banner.",
+    liveLink: "#",
+    languages: [
+      { name: "Figma", icon: <FaFigma /> },
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+    ],
   },
   {
     id: 5,
@@ -46,6 +81,12 @@ const projects = [
     category: "web",
     image: project1,
     description: "Real estate web platform with clean UI.",
+    liveLink: "#",
+    languages: [
+      { name: "Laravel", icon: <FaLaravel /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
+    ],
   },
   {
     id: 6,
@@ -53,6 +94,12 @@ const projects = [
     category: "web",
     image: project2,
     description: "Flight booking system.",
+    liveLink: "#",
+    languages: [
+      { name: "React", icon: <FaReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
+    ],
   },
   {
     id: 7,
@@ -60,6 +107,12 @@ const projects = [
     category: "design",
     image: project3,
     description: "Mobile dashboard UI concept.",
+    liveLink: "#",
+    languages: [
+      { name: "Figma", icon: <FaFigma /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "UI Design", icon: <CiMobile3 /> },
+    ],
   },
   {
     id: 8,
@@ -67,6 +120,12 @@ const projects = [
     category: "design",
     image: project4,
     description: "Creative landing page.",
+    liveLink: "#",
+    languages: [
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+    ],
   },
 ];
 
@@ -98,8 +157,11 @@ const Projects = () => {
     : filteredProjects.slice(0, 4);
 
   return (
-    <section id="projects" className="bg-white py-20 sm:py-24 lg:py-28">
-      <div className="mx-auto w-11/12 max-w-300">
+    <section
+      id="projects"
+      className="bg-linear-to-b from-white via-sky-50/60 to-white py-20 font-[Poppins] sm:py-24 lg:py-28"
+    >
+      <div className="mx-auto w-11/13">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div>
             <div className="mb-3 flex items-center gap-3">
@@ -109,13 +171,13 @@ const Projects = () => {
               </p>
             </div>
 
-            <h2 className="text-4xl font-black sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl font-black text-[#151515] sm:text-5xl lg:text-6xl">
               Featured <span className="text-gray-400">Works</span>
             </h2>
           </div>
 
           <div className="flex w-full justify-start lg:justify-end">
-            <div className="flex w-full max-w-[320px] items-center rounded-full border border-gray-200 bg-[#f3f5f8] p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] sm:w-auto sm:max-w-none">
+            <div className="flex w-full max-w-[320px] items-center rounded-full border border-gray-200 bg-white/60 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-md sm:w-auto sm:max-w-none">
               {tabs.map((tab) => (
                 <button
                   key={tab.value}
@@ -134,43 +196,65 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6">
           {visibleProjects.map((project) => (
-            <Link
+            <div
               key={project.id}
-              href={`/projects/${project.id}`}
-              className="group block rounded-3xl border border-gray-200 bg-white p-4 transition duration-300 hover:-translate-y-2"
-              style={{
-                boxShadow: "0px 2px 2px 2px rgba(125, 211, 252, 0.6)",
-              }}
+              className="group flex h-full flex-col rounded-3xl border border-black/10 bg-transparent p-2 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-sky-200 hover:bg-white/30 hover:shadow-[0_24px_70px_rgba(56,189,248,0.16)] hover:ring-2 hover:ring-sky-300/70 hover:backdrop-blur-xl"
             >
-              <div className="relative h-52 overflow-hidden rounded-2xl bg-gray-50 sm:h-56">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  fill
-                  className="object-contain p-5 transition duration-500 group-hover:scale-105"
-                />
+              <Link href={`/projects/${project.id}`} className="block">
+                <div className="relative h-52 overflow-hidden rounded-2xl border border-black/10 bg-white/50 backdrop-blur-md transition-all duration-500 ease-out group-hover:border-sky-200 group-hover:bg-white/70 sm:h-56">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-contain p-5 transition duration-500 ease-out group-hover:scale-105"
+                  />
+                </div>
+              </Link>
+
+              <div className="mt-5 flex items-center justify-between gap-3">
+                <Link
+                  href={`/projects/${project.id}`}
+                  className="min-w-0 flex-1"
+                >
+                  <h3 className="truncate text-xl font-extrabold text-[#151515] sm:text-2xl">
+                    {project.name}
+                  </h3>
+                </Link>
+
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group/live flex shrink-0 items-center gap-1 rounded-full border border-black/10 bg-transparent py-0.5 pl-2.5 pr-1 text-[11px] font-extrabold leading-none text-[#151515] transition"
+                >
+                  <span>Live</span>
+
+                  <span className="grid h-6 w-6 place-items-center rounded-full border border-black/10 bg-transparent text-[#151515] transition-all duration-300 group-hover/live:border-black group-hover/live:bg-black group-hover/live:text-white">
+                    <FaArrowRight className="-rotate-45 text-[9px] transition-transform duration-300 group-hover/live:translate-x-0.5 group-hover/live:-translate-y-0.5" />
+                  </span>
+                </a>
               </div>
 
-              <div className="mt-5 flex justify-between gap-4">
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400">
-                    {project.category}
-                  </p>
+              <Link href={`/projects/${project.id}`} className="block">
+                <p className="mt-2 text-sm leading-6 text-gray-500">
+                  {project.description}
+                </p>
+              </Link>
 
-                  <h3 className="mt-2 text-xl font-bold">{project.name}</h3>
-
-                  <p className="mt-2 text-sm text-gray-500">
-                    {project.description}
-                  </p>
-                </div>
-
-                <div className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white transition group-hover:bg-black group-hover:text-white">
-                  <FaArrowRight className="-rotate-45 text-xs" />
-                </div>
+              <div className="mt-5 flex cursor-pointer flex-wrap gap-2">
+                {project.languages.map((language) => (
+                  <span
+                    key={language.name}
+                    className="flex items-center gap-2 rounded-full border border-black/10 bg-transparent px-3 py-2 text-xs font-bold text-gray-600 transition hover:bg-black hover:text-white"
+                  >
+                    <span className="text-sm">{language.icon}</span>
+                    {language.name}
+                  </span>
+                ))}
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
