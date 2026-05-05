@@ -65,7 +65,10 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="relative mt-30 py-24 p-2 overflow-visible">
+    <section
+      id="about"
+      className="relative mt-30 md:40 lg:mt-40 p-2 overflow-visible"
+    >
       <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full" />
       {/* Blue shade div removed from here */}
 
@@ -74,7 +77,7 @@ const About = () => {
           {/* Left Sticky Image */}
           <div className="lg:block lg:sticky lg:top-28 lg:self-start">
             <div className="relative mx-auto max-w-107.5">
-              <div className="absolute -left-6 -top-6 z-20 rounded-2xl border border-base-300 bg-base-100/90 px-5 py-3 shadow-xl backdrop-blur">
+              <div className="absolute -left-4 -top-6 z-20 rounded-2xl border border-base-300 bg-base-100/90 px-5 py-3 shadow-xl backdrop-blur">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-700 text-sky-400 text-xl">
                     <FaAward />

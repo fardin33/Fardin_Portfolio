@@ -25,9 +25,9 @@ import {
   SiExpress,
   SiVercel,
   SiFigma,
+  SiFlutter,
+  SiDart,
 } from "react-icons/si";
-
-import { SiFlutter, SiDart } from "react-icons/si";
 
 const skills = [
   {
@@ -88,7 +88,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-11/13 mx-auto section-padding mt-20 mb-20"
+      className="mx-auto mb-20 mt-30 w-11/13 section-padding md:mt-40 lg:mt-45"
     >
       <div className="container-custom">
         <div className="text-center">
@@ -151,11 +151,11 @@ const Skills = () => {
                 className="rounded-4xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-5"
               >
                 <div className="mb-5 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-950 text-xl text-sky-400">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-950 text-xl text-sky-400">
                     {group.icon}
                   </div>
 
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="text-lg font-bold sm:text-xl">
                       {group.title}
                     </h3>
@@ -171,18 +171,18 @@ const Skills = () => {
                       key={skill.name}
                       className="rounded-xl border border-slate-200 bg-slate-50/80 p-3 transition duration-300 hover:border-sky-300 hover:bg-white hover:shadow-md"
                     >
-                      <div className="flex items-center justify-between gap-2">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg text-black">
+                      <div className="flex flex-wrap items-start gap-x-2 gap-y-1">
+                        <div className="flex max-w-full min-w-0 shrink items-start gap-2">
+                          <span className="shrink-0 pt-0.5 text-lg text-black">
                             {skill.icon}
                           </span>
 
-                          <p className="text-xs font-semibold sm:text-sm">
+                          <p className="min-w-0 whitespace-normal wrap-break-word text-xs font-semibold leading-snug sm:text-sm">
                             {skill.name}
                           </p>
                         </div>
 
-                        <p className="text-xs font-bold text-sky-700">
+                        <p className="ml-auto shrink-0 text-right text-xs font-bold text-sky-700 sm:text-sm">
                           {animate ? skill.percent : 0}%
                         </p>
                       </div>
