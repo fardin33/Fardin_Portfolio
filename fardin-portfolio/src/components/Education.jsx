@@ -55,7 +55,7 @@ const Education = () => {
       id="education"
       className="relative overflow-hidden bg-white py-24 text-black"
     >
-      <div className="mx-auto w-11/12">
+      <div className="mx-auto w-[88%]">
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-extrabold md:text-5xl">Education</h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-sky-700" />
@@ -122,9 +122,11 @@ const Education = () => {
           </div>
         </div>
 
-        <div className="mx-auto mt-24 max-w-6xl">
+        <div className="mt-24 mx-auto w-full">
           <div className="mb-10 text-center">
-            <p className="font-semibold text-sky-700">Courses</p>
+            <span className="inline-block rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700">
+              Courses
+            </span>
             <h3 className="mt-2 text-3xl font-extrabold md:text-4xl">
               Learning Platforms
             </h3>

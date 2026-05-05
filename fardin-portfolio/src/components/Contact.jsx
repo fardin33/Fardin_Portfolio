@@ -41,9 +41,9 @@ const Contact = () => {
       id="contact"
       className="w-full bg-linear-to-b from-white via-sky-50/60 to-white py-16 font-[Poppins] md:py-20"
     >
-      <div className="mx-auto w-11/13">
+      <div className="mx-auto w-[88%]">
         <div className="mx-auto mb-10 max-w-2xl text-center md:mb-12">
-          <span className="inline-block rounded-full bg-sky-100 px-5 py-2 text-sm font-semibold text-sky-700">
+          <span className="inline-block rounded-full bg-sky-100 px-4 py-1.5 text-sm font-semibold text-sky-700">
             Contact Me
           </span>
 
@@ -57,7 +57,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid items-stretch gap-8 lg:grid-cols-2">
+        <div className="grid items-stretch gap-8 md:grid-cols-2">
           <div className="rounded-4xl border border-black/10 bg-transparent p-5 sm:p-6 md:p-8">
             <div className="mb-8">
               <h3 className="text-2xl font-extrabold text-[#151515] md:text-3xl">

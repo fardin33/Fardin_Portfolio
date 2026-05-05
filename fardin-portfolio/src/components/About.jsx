@@ -67,14 +67,12 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative mt-30 md:40 lg:mt-40 p-2 overflow-visible"
+      className="relative mt-25 md:40 lg:mt-40 p-2 overflow-visible"
     >
       <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full" />
-      {/* Blue shade div removed from here */}
 
-      <div className="relative z-10 mx-auto w-11/12">
+      <div className="relative z-10 mx-auto w-[88%]">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          {/* Left Sticky Image */}
           <div className="lg:block lg:sticky lg:top-28 lg:self-start">
             <div className="relative mx-auto max-w-107.5">
               <div className="absolute -left-4 -top-6 z-20 rounded-2xl border border-base-300 bg-base-100/90 px-5 py-3 shadow-xl backdrop-blur">
@@ -124,11 +122,10 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right Scroll Content */}
           <div>
-            <p className="font-semibold tracking-wide text-gray-500">
+            <span className="inline-block rounded-full bg-sky-100 px-4 py-1.5  text-sm font-semibold text-sky-700">
               About Me
-            </p>
+            </span>
 
             <h2 className="mt-3 max-w-2xl text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
               From a curious question to a professional craft.

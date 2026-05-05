@@ -88,11 +88,13 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="mx-auto mb-20 mt-30 w-11/13 section-padding md:mt-40 lg:mt-45"
+      className="mx-auto mb-20 mt-30 w-[88%] section-padding md:mt-40 lg:mt-45"
     >
       <div className="container-custom">
         <div className="text-center">
-          <p className="font-semibold text-gray-500">Skills</p>
+          <span className="inline-block rounded-full bg-sky-100 px-4 py-1.5 text-sm font-semibold text-sky-700">
+            Skills
+          </span>
 
           <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl">
             Technologies I Use

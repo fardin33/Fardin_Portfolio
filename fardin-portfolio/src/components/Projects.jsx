@@ -161,14 +161,14 @@ const Projects = () => {
       id="projects"
       className="bg-linear-to-b from-white via-sky-50/60 to-white py-20 font-[Poppins] sm:py-24 lg:py-28"
     >
-      <div className="mx-auto w-11/13">
+      <div className="mx-auto w-[88%]">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <div>
             <div className="mb-3 flex items-center gap-3">
               <span className="h-px w-8 bg-gray-300" />
-              <p className="text-xs font-bold uppercase tracking-[0.35em] text-gray-400">
-                Portfolio
-              </p>
+              <span className="inline-block rounded-full bg-sky-100 px-4 py-1.5 text-sm font-semibold text-sky-700">
+                Projects
+              </span>
             </div>
 
             <h2 className="text-4xl font-black text-[#151515] sm:text-5xl lg:text-6xl">
@@ -200,7 +200,7 @@ const Projects = () => {
           {visibleProjects.map((project) => (
             <div
               key={project.id}
-              className="group flex h-full flex-col rounded-3xl border border-black/10 bg-transparent p-2 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-sky-200 hover:bg-white/30 hover:shadow-[0_24px_70px_rgba(56,189,248,0.16)] hover:ring-2 hover:ring-sky-300/70 hover:backdrop-blur-xl"
+              className="group flex h-full flex-col rounded-3xl border border-black/10 bg-transparent p-3 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-sky-200 hover:bg-white/30 hover:shadow-[0_24px_70px_rgba(56,189,248,0.16)] hover:ring-2 hover:ring-sky-300/70 hover:backdrop-blur-xl"
             >
               <Link href={`/projects/${project.id}`} className="block">
                 <div className="relative h-52 overflow-hidden rounded-2xl border border-black/10 bg-white/50 backdrop-blur-md transition-all duration-500 ease-out group-hover:border-sky-200 group-hover:bg-white/70 sm:h-56">

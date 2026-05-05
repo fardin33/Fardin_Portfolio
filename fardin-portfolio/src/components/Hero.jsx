@@ -1,15 +1,36 @@
 "use client";
 
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaDribbble, FaAngellist } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaDiscord,
+  FaFacebookF,
+  FaLinkedinIn,
+} from "react-icons/fa6";
 import me from "../assets/me-f.png";
 
 const Hero = () => {
   const socials = [
-    { icon: <FaLinkedin />, href: "#" },
-    { icon: <FaGithub />, href: "#" },
-    { icon: <FaDribbble />, href: "#" },
-    { icon: <FaAngellist />, href: "#" },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/fardinhasan.jihad.33",
+      icon: <FaFacebookF />,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/fardin-hassan-jihad",
+      icon: <FaLinkedinIn />,
+    },
+    {
+      name: "GitHub",
+      href: "https://github.com/fardin33",
+      icon: <FaGithub />,
+    },
+    {
+      name: "Discord",
+      href: "https://discord.com/users/1413845522225168394",
+      icon: <FaDiscord />,
+    },
   ];
 
   return (
@@ -19,18 +40,17 @@ const Hero = () => {
     >
       <div className="absolute left-1/2 top-0 z-0 h-75 w-75 -translate-x-1/2 rounded-full bg-sky-500/10 opacity-50 blur-[120px] sm:h-125 sm:w-125" />
 
-      <div className="relative z-10 mx-auto max-w-275 xl:max-w-337.5 2xl:max-w-375 px-4 sm:px-6 lg:px-8 xl:px-6 2xl:px-4">
+      <div className="relative z-10 mx-auto w-[88%]">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
           <div className="relative order-1 flex items-center justify-center lg:order-2">
             <div className="group relative flex items-center justify-center">
               <div className="absolute rounded-full blur-3xl transition-all duration-500 h-60 w-60" />
 
-              <div className="mt-8  md:mt-8 lg:mt-0 relative mx-auto h-87.5 w-70 overflow-hidden rounded-full sm:h-112.5 sm:w-87.5 lg:h-180 lg:w-180">
+              <div className="mt-8 md:mt-8 lg:mt-0 relative mx-auto h-87.5 w-70 overflow-hidden rounded-full sm:h-112.5 sm:w-87.5 lg:h-180 lg:w-180">
                 <Image
                   src={me}
                   alt="Fardin Hassan"
                   fill
-                  // className="object-cover object-center"
                   className="object-cover object-center drop-shadow-[0_0_8px_#0284c7]"
                   priority
                 />
@@ -61,6 +81,7 @@ const Hero = () => {
                   <a
                     key={index}
                     href={item.href}
+                    target="_blank"
                     className="flex h-11 w-11 items-center justify-center rounded-full border border-black text-black transition-all duration-300 hover:-translate-y-1 hover:bg-black hover:text-white"
                   >
                     {item.icon}

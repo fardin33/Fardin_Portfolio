@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { BsDiscord } from "react-icons/bs";
 import {
   FaCode,
+  FaDiscord,
   FaEnvelope,
   FaFacebookF,
   FaGithub,
@@ -37,24 +39,29 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/fardinhasan.jihad.33",
       icon: <FaFacebookF />,
     },
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/in/fardin-hassan-jihad",
       icon: <FaLinkedinIn />,
     },
     {
       name: "GitHub",
-      href: "#",
+      href: "https://github.com/fardin33",
       icon: <FaGithub />,
+    },
+    {
+      name: "Discord",
+      href: "https://discord.com/users/1413845522225168394",
+      icon: <FaDiscord />,
     },
   ];
 
   return (
     <footer className="w-full bg-linear-to-b from-white via-sky-50/60 to-white py-10 font-[Poppins] sm:py-12">
-      <div className="mx-auto w-11/12 overflow-hidden rounded-[34px] border border-black/10 bg-white/35 shadow-[0_20px_70px_rgba(0,0,0,0.08)] backdrop-blur-xl">
+      <div className="mx-auto w-[88%] overflow-hidden rounded-[34px] border border-black/10 bg-white/35 shadow-[0_20px_70px_rgba(0,0,0,0.08)] backdrop-blur-xl">
         <div className="grid items-start gap-8 p-6 sm:p-8 lg:grid-cols-[1.15fr_1fr_1.15fr] lg:gap-10 lg:p-10">
           <div className="flex h-full w-full flex-col items-start text-left">
             <Link href="/" className="inline-flex items-center gap-3">
