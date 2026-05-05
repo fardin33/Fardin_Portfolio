@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -99,22 +100,22 @@ const Navbar = () => {
   return (
     <header className="fixed top-1 md:top-0 lg:top-2 left-0 z-50 w-full px-3 py-2.5 md:px-8 md:py-2 lg:px-3 lg:py-2 font-[Poppins] pointer-events-none">
       <nav
-        className={`relative mx-auto flex items-center justify-between rounded-4xl border border-black/10 bg-white/90 shadow-[0_12px_40px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-all duration-500 pointer-events-auto ${
+        className={`relative mx-auto flex items-center justify-between rounded-4xl border border-black/10 bg-white/50 shadow-[0_12px_40px_rgba(0,0,0,0.08)] backdrop-blur-xl transition-all duration-500 pointer-events-auto ${
           scrolled
             ? "max-w-6xl px-4 py-2.5 -mt-2.5"
             : "max-w-7xl px-5 py-3 md:px-6"
         }`}
       >
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#151515] text-white text-xl">
+          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#151515]/90 text-white text-xl">
             <FaCode />
           </span>
-          <span className="text-xl md:text-[23px] lg:text-[26px] font-extrabold text-shadow-sky-500">
+          <span className="text-xl md:text-[23px] lg:text-[26px] font-extrabold text-[#151515] text-shadow-sky-500">
             Fardin.
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-2 rounded-full bg-white px-3 py-1.5 lg:flex">
+        <ul className="hidden items-center gap-2 rounded-full bg-white/25 px-3 py-1.5 backdrop-blur-md lg:flex">
           {navLinks.map((link) => {
             const isActive = activeLink === link.href;
 
@@ -123,10 +124,10 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   onClick={(event) => handleNavClick(event, link.href)}
-                  className={`relative px-4 py-2 text-[15px] font-semibold rounded-full ${
+                  className={`relative px-4 py-2 text-[15px] font-bold rounded-full ${
                     isActive
-                      ? "bg-black text-white shadow-sm"
-                      : "text-gray-500 hover:text-black hover:bg-gray-100"
+                      ? "bg-black/75 text-white shadow-sm"
+                      : "text-gray-800 hover:text-black hover:bg-white/35"
                   }`}
                 >
                   {link.name}
@@ -137,7 +138,7 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-2">
-          <button className="hidden h-10 w-10 place-items-center rounded-full text-[22px] bg-sky-100 text-sky-700 transition hover:bg-sky-200 md:grid">
+          <button className="hidden h-10 w-10 place-items-center rounded-full text-[22px] bg-sky-100/60 text-sky-800 transition hover:bg-sky-200/80 md:grid">
             <IoSunnyOutline />
           </button>
 
@@ -145,7 +146,7 @@ const Navbar = () => {
             href={whatsappLink}
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-2 rounded-full bg-[#151515] px-5 py-3 text-sm font-bold text-white md:flex"
+            className="hidden items-center gap-2 rounded-full bg-[#151515]/85 px-5 py-3 text-sm font-bold text-white md:flex"
           >
             <span className="relative grid h-6 w-6 place-items-center rounded-full bg-white/15">
               <span className="absolute h-full w-full animate-ping rounded-full bg-white/40" />
@@ -154,13 +155,13 @@ const Navbar = () => {
             Book A Call
           </a>
 
-          <button className="grid h-10 w-10 place-items-center rounded-full text-[22px] bg-sky-100 text-sky-700 transition hover:bg-sky-200 md:hidden">
+          <button className="grid h-10 w-10 place-items-center rounded-full text-[22px] bg-sky-100/60 text-sky-800 transition hover:bg-sky-200/80 md:hidden">
             <IoSunnyOutline />
           </button>
 
           <button
             onClick={() => setOpen((prev) => !prev)}
-            className="grid h-10 w-10 place-items-center rounded-full bg-[#151515] text-white lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full bg-[#151515]/85 text-white lg:hidden"
           >
             {open ? <FaXmark /> : <FaBarsStaggered />}
           </button>
@@ -168,7 +169,7 @@ const Navbar = () => {
       </nav>
 
       <div
-        className={`pointer-events-auto absolute right-5 top-23.5 z-50 w-44 rounded-lg border border-black/20 bg-white p-2 shadow-xl transition-all duration-200 md:right-8 md:top-24.5 md:w-50 lg:hidden ${
+        className={`pointer-events-auto absolute right-5 top-23.5 z-50 w-44 rounded-lg border border-black/20 bg-white/50 p-2 shadow-xl backdrop-blur-xl transition-all duration-200 md:right-8 md:top-24.5 md:w-50 lg:hidden ${
           open
             ? "visible translate-y-0 opacity-100"
             : "invisible -translate-y-2 opacity-0"
@@ -183,10 +184,10 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(event) => handleNavClick(event, link.href)}
-                className={`flex items-center gap-3 rounded-md px-4 py-3 text-sm font-semibold ${
+                className={`flex items-center gap-3 rounded-md px-4 py-3 text-sm font-bold ${
                   isActive
-                    ? "bg-[#202020] text-white shadow-sm"
-                    : "text-slate-700 hover:bg-slate-100"
+                    ? "bg-[#202020]/75 text-white shadow-sm"
+                    : "text-slate-900 hover:bg-white/35"
                 }`}
               >
                 <span className="text-base">{link.icon}</span>
@@ -200,7 +201,7 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-1 flex items-center gap-3 rounded-lg border border-black/50 px-4 py-3 text-sm font-semibold text-black shadow-sm md:hidden"
+            className="mt-1 flex items-center gap-3 rounded-lg border border-black/50 px-4 py-3 text-sm font-bold text-black shadow-sm md:hidden"
           >
             <FaPhoneVolume />
             Book A Call

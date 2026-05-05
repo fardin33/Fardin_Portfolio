@@ -7,59 +7,80 @@ import {
   FaArrowRight,
   FaCode,
   FaGrip,
-  FaHtml5,
   FaCss3Alt,
   FaReact,
   FaLaravel,
   FaFigma,
+  FaHtml5,
 } from "react-icons/fa6";
+
 import { CiMobile3 } from "react-icons/ci";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
-import { SiJavascript, SiTypescript } from "react-icons/si";
 
-import project1 from "../assets/Electrician-amico.png";
-import project2 from "../assets/Electrician-bro.png";
-import project3 from "../assets/Location review-bro.png";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiMongodb,
+  SiDaisyui,
+  SiFigma,
+} from "react-icons/si";
+
+import project1 from "../assets/SummerStore.jpeg";
+import project2 from "../assets/KeenKeeper.jpeg";
+import project3 from "../assets//BookVibe.jpeg";
 import project4 from "../assets/Location.png";
 
 const projects = [
   {
     id: 1,
-    name: "Snippit",
+    name: "Summer Store",
     category: "web",
     image: project1,
-    description: "An open-source SaaS starter registry.",
-    liveLink: "#",
+    description:
+      "Modern summer eCommerce platform featuring secure authentication and user profiles.",
+    liveLink: "https://summer-store-tau.vercel.app",
     languages: [
+      { name: "MongoDB", icon: <SiMongodb /> },
       { name: "Next.js", icon: <RiNextjsFill /> },
-      { name: "React", icon: <FaReact /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+      { name: "Better Auth", icon: <RiNextjsFill /> },
       { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "DaisyUI", icon: <SiDaisyui /> },
+      { name: "CSS3", icon: <FaCss3Alt /> },
+      { name: "Html5", icon: <FaHtml5 /> },
     ],
   },
   {
     id: 2,
-    name: "Autovion",
-    category: "design",
+    name: "Keen keeper",
+    category: "Web",
     image: project2,
-    description: "Luxury car showroom UI focused on clarity.",
-    liveLink: "#",
-    languages: [
-      { name: "Figma", icon: <FaFigma /> },
-      { name: "HTML", icon: <FaHtml5 /> },
-      { name: "CSS", icon: <FaCss3Alt /> },
-    ],
-  },
-  {
-    id: 3,
-    name: "Zentra",
-    category: "web",
-    image: project3,
-    description: "Municipal infrastructure landing page.",
-    liveLink: "#",
+    description:
+      "KeenKeeper is a friendship management app designed to track and nurture social connections.",
+    liveLink: "https://keenkeeper-fardin.netlify.app",
     languages: [
       { name: "React", icon: <FaReact /> },
       { name: "JavaScript", icon: <SiJavascript /> },
       { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "DaisyUI", icon: <SiDaisyui /> },
+      { name: "CSS3", icon: <FaCss3Alt /> },
+      { name: "Html5", icon: <FaHtml5 /> },
+    ],
+  },
+  {
+    id: 3,
+    name: "Book Vibe",
+    category: "web",
+    image: project3,
+    description: "Municipal infrastructure landing page.",
+    liveLink: "https://book-vibe-fardin.netlify.app",
+    languages: [
+      { name: "React", icon: <FaReact /> },
+      { name: "JavaScript", icon: <SiJavascript /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "DaisyUI", icon: <SiDaisyui /> },
+      { name: "CSS3", icon: <FaCss3Alt /> },
+      { name: "Html5", icon: <FaHtml5 /> },
     ],
   },
   {
@@ -68,7 +89,7 @@ const projects = [
     category: "design",
     image: project4,
     description: "Modern shoe store hero banner.",
-    liveLink: "#",
+    liveLink: "App",
     languages: [
       { name: "Figma", icon: <FaFigma /> },
       { name: "HTML", icon: <FaHtml5 /> },
@@ -77,11 +98,12 @@ const projects = [
   },
   {
     id: 5,
-    name: "Shopnoneer",
+    name: "DigiTools",
     category: "web",
     image: project1,
-    description: "Real estate web platform with clean UI.",
-    liveLink: "#",
+    description:
+      "Premium digital tools for creators, professionals, and businesses.",
+    liveLink: "https://digitools-fardin.netlify.app",
     languages: [
       { name: "Laravel", icon: <FaLaravel /> },
       { name: "React", icon: <FaReact /> },
@@ -90,19 +112,6 @@ const projects = [
   },
   {
     id: 6,
-    name: "Nusuki Flight",
-    category: "web",
-    image: project2,
-    description: "Flight booking system.",
-    liveLink: "#",
-    languages: [
-      { name: "React", icon: <FaReact /> },
-      { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "Tailwind", icon: <RiTailwindCssFill /> },
-    ],
-  },
-  {
-    id: 7,
     name: "Mobile UI",
     category: "design",
     image: project3,
@@ -115,7 +124,7 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 7,
     name: "Landing Design",
     category: "design",
     image: project4,
@@ -125,6 +134,19 @@ const projects = [
       { name: "HTML", icon: <FaHtml5 /> },
       { name: "CSS", icon: <FaCss3Alt /> },
       { name: "JavaScript", icon: <SiJavascript /> },
+    ],
+  },
+  {
+    id: 8,
+    name: "Solelux",
+    category: "design",
+    image: project4,
+    description: "Modern shoe store hero banner.",
+    liveLink: "#",
+    languages: [
+      { name: "Figma", icon: <FaFigma /> },
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
     ],
   },
 ];

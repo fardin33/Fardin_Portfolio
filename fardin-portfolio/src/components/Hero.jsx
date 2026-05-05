@@ -91,7 +91,7 @@ const Hero = () => {
 
               <div className="mt-6 flex">
                 <a
-                  href="/resume.pdf"
+                  href="/Fardin.pdf"
                   download
                   className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-6 py-3 text-sm font-bold uppercase tracking-[0.15em] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-black"
                 >
@@ -131,7 +131,7 @@ const Hero = () => {
 
               <div className="mt-6 flex justify-center">
                 <a
-                  href="/resume.pdf"
+                  href="/Fardin.pdf"
                   download
                   className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-6 py-3 text-sm font-bold uppercase tracking-[0.15em] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-black"
                 >

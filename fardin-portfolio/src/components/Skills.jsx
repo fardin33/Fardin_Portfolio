@@ -1,6 +1,9 @@
+
+
 "use client";
 
 import { useEffect, useState } from "react";
+import Lottie from "lottie-react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -10,7 +13,6 @@ import {
   FaNodeJs,
   FaDatabase,
   FaMobileScreenButton,
-  FaCode,
 } from "react-icons/fa6";
 import {
   SiNextdotjs,
@@ -28,6 +30,8 @@ import {
   SiFlutter,
   SiDart,
 } from "react-icons/si";
+
+import developerAnimation from "../assets/developerSkill.json";
 
 const skills = [
   {
@@ -108,40 +112,32 @@ const Skills = () => {
 
         <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.9fr_1.4fr]">
           <div className="sticky top-24 hidden lg:block">
-            <div className="relative overflow-hidden rounded-4xl border border-slate-200 bg-white p-8 shadow-xl">
-              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-sky-200/40 blur-3xl" />
-              <div className="absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-primary/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-4xl border border-slate-200 bg-transparent p-6 shadow-sm backdrop-blur">
+              <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-sky-200/40 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-sky-500/10 blur-3xl" />
 
-              <div className="relative mx-auto flex h-105 max-w-sm items-center justify-center">
-                <div className="absolute top-8 h-24 w-24 rounded-full bg-sky-100" />
+              <div className="relative mx-auto flex min-h-[420px] max-w-sm items-center justify-center">
+                <Lottie
+                  animationData={developerAnimation}
+                  loop={true}
+                  autoplay={true}
+                  className="h-full w-full"
+                />
+              </div>
+            </div>
+          </div>
 
-                <div className="relative z-10 flex flex-col items-center">
-                  <div className="h-20 w-20 rounded-full bg-primary/20 shadow-md" />
+          <div className="lg:hidden">
+            <div className="relative overflow-hidden rounded-4xl border border-slate-200 bg-transparent p-4 shadow-sm backdrop-blur">
+              <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-sky-200/40 blur-3xl" />
 
-                  <div className="mt-4 h-28 w-40 rounded-t-[3rem] bg-primary/80 shadow-xl" />
-
-                  <div className="-mt-2 h-20 w-56 rounded-3xl bg-slate-900 shadow-2xl">
-                    <div className="flex h-full items-center justify-center">
-                      <FaCode className="text-4xl text-sky-400" />
-                    </div>
-                  </div>
-
-                  <div className="mt-4 h-4 w-40 rounded-full bg-slate-200" />
-
-                  <div className="mt-6 flex gap-3">
-                    <div className="h-10 w-10 rounded-2xl bg-sky-100 shadow-sm" />
-                    <div className="h-10 w-10 rounded-2xl bg-primary/10 shadow-sm" />
-                    <div className="h-10 w-10 rounded-2xl bg-slate-100 shadow-sm" />
-                  </div>
-                </div>
-
-                <div className="absolute left-3 top-20 rounded-2xl bg-white px-4 py-3 text-sm font-semibold shadow-lg">
-                  {"<Code />"}
-                </div>
-
-                <div className="absolute bottom-20 right-0 rounded-2xl bg-sky-500 px-4 py-3 text-sm font-bold text-white shadow-lg">
-                  Build UI
-                </div>
+              <div className="relative mx-auto flex h-72 max-w-sm items-center justify-center sm:h-96">
+                <Lottie
+                  animationData={developerAnimation}
+                  loop={true}
+                  autoplay={true}
+                  className="h-full w-full"
+                />
               </div>
             </div>
           </div>
@@ -150,7 +146,7 @@ const Skills = () => {
             {skills.map((group) => (
               <div
                 key={group.title}
-                className="rounded-4xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-5"
+                className="rounded-4xl border border-slate-200 bg-transparent p-4 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-5"
               >
                 <div className="mb-5 flex items-center gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-950 text-xl text-sky-400">
@@ -171,7 +167,7 @@ const Skills = () => {
                   {group.items.map((skill) => (
                     <div
                       key={skill.name}
-                      className="rounded-xl border border-slate-200 bg-slate-50/80 p-3 transition duration-300 hover:border-sky-300 hover:bg-white hover:shadow-md"
+                      className="rounded-xl border border-slate-200 bg-transparent p-3 transition duration-300 hover:border-sky-300 hover:bg-white/60 hover:shadow-md"
                     >
                       <div className="flex flex-wrap items-start gap-x-2 gap-y-1">
                         <div className="flex max-w-full min-w-0 shrink items-start gap-2">
