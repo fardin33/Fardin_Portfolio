@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -20,18 +18,29 @@ import {
   SiDaisyui,
   SiFirebase,
   SiMongodb,
-  SiMysql,
+  SiHeroui,
   SiRedux,
-  SiTypescript,
-  SiExpo,
   SiExpress,
   SiVercel,
   SiFigma,
   SiFlutter,
   SiDart,
+  SiPostman,
+  SiAndroidstudio,
 } from "react-icons/si";
 
 import developerAnimation from "../assets/developerSkill.json";
+
+const VSCodeIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    className="h-6 w-6"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M17.6 3.2 8.9 11 4.4 7.6 2.5 8.7v6.6l1.9 1.1 4.5-3.4 8.7 7.8 3.9-1.6V4.8l-3.9-1.6Zm0 5.2v7.2L11.9 12l5.7-3.6ZM4.6 10.4 7.1 12l-2.5 1.6v-3.2Z" />
+  </svg>
+);
 
 const skills = [
   {
@@ -40,11 +49,13 @@ const skills = [
     items: [
       { name: "HTML", icon: <FaHtml5 />, percent: 90 },
       { name: "CSS", icon: <FaCss3Alt />, percent: 85 },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, percent: 90 },
+      { name: "Daisy UI", icon: <SiDaisyui />, percent: 85 },
+      { name: "Hero UI", icon: <SiHeroui />, percent: 85 },
       { name: "JavaScript", icon: <FaJs />, percent: 80 },
-      { name: "React", icon: <FaReact />, percent: 85 },
-      { name: "Next.js", icon: <SiNextdotjs />, percent: 75 },
-      { name: "Tailwind", icon: <SiTailwindcss />, percent: 90 },
-      { name: "DaisyUI", icon: <SiDaisyui />, percent: 80 },
+      { name: "React", icon: <FaReact />, percent: 80 },
+      { name: "Redux", icon: <SiRedux />, percent: 50 },
+      { name: "Next.js", icon: <SiNextdotjs />, percent: 80 },
     ],
   },
   {
@@ -53,8 +64,6 @@ const skills = [
     items: [
       { name: "Dart", icon: <SiDart />, percent: 70 },
       { name: "Flutter", icon: <SiFlutter />, percent: 75 },
-      { name: "React Native", icon: <FaReact />, percent: 65 },
-      { name: "Expo", icon: <SiExpo />, percent: 60 },
     ],
   },
   {
@@ -65,7 +74,6 @@ const skills = [
       { name: "Express.js", icon: <SiExpress />, percent: 65 },
       { name: "Firebase", icon: <SiFirebase />, percent: 75 },
       { name: "MongoDB", icon: <SiMongodb />, percent: 65 },
-      { name: "MySQL", icon: <SiMysql />, percent: 70 },
     ],
   },
   {
@@ -73,10 +81,15 @@ const skills = [
     icon: <FaGithub />,
     items: [
       { name: "GitHub", icon: <FaGithub />, percent: 85 },
-      { name: "Redux", icon: <SiRedux />, percent: 75 },
-      { name: "TypeScript", icon: <SiTypescript />, percent: 70 },
       { name: "Vercel", icon: <SiVercel />, percent: 80 },
       { name: "Figma", icon: <SiFigma />, percent: 60 },
+      { name: "Postman", icon: <SiPostman />, percent: 60 },
+      {
+        name: "VS Code",
+        icon: <VSCodeIcon />,
+        percent: 90,
+      },
+      { name: "Android Studio", icon: <SiAndroidstudio />, percent: 80 },
     ],
   },
 ];
@@ -116,7 +129,7 @@ const Skills = () => {
               <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-sky-200/40 blur-3xl" />
               <div className="pointer-events-none absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-sky-500/10 blur-3xl" />
 
-              <div className="relative mx-auto flex min-h-[420px] max-w-sm items-center justify-center">
+              <div className="relative mx-auto flex min-h-105 max-w-sm items-center justify-center">
                 <Lottie
                   animationData={developerAnimation}
                   loop={true}
